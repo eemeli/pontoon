@@ -30,11 +30,16 @@ export default function withActionsDisabled<Config extends {}>(
         componentDidUpdate(prevProps: $Diff<Config, Props>, prevState: State) {
             if (prevState.isActionDisabled) {
                 this.setState({ isActionDisabled: false });
+                console.log('wAD disable', {
+                    sameProps: this.props === prevProps,
+                    sameState: this.state === prevState,
+                });
             }
         }
 
         disableAction = () => {
             this.setState({ isActionDisabled: true });
+            console.log('wAD enable');
         };
 
         render() {
