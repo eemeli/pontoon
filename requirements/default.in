@@ -54,4 +54,5 @@ whitenoise==5.2.0
 wsgi-sslify==1.0.1
 
 # Dependencies loaded from outside pypi.
+moz.l10n @ https://github.com/mozilla/moz-l10n/archive/configure.zip
 silme @ https://github.com/mozilla/silme/archive/v0.11.2.zip
